@@ -1,0 +1,16 @@
+<h1 class="text-info">Deposit</h1>
+<br>
+<br>
+<table class="table">
+
+ <img src="https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjr_qO07PTjAhXWfH0KHfiiDDQQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.bankrate.com%2Fbanking%2Fhow-long-can-a-bank-hold-deposit%2F&psig=AOvVaw0jZ9GGxkih8S7sfSfRCAvT&ust=1565407722375952 " class="rounded float-right" alt="deposit" width="300" height="220">
+ <div class="form-group">
+ <div class="col-sm-6">
+ <label>Enter Amount to be deposited into your account </label>
+ <input type="text" #nameRef="ngModel" class="form-control" name="amount" #amount ngModel required />
+ </div>
+ </div>
+ <br>
+ <button type="button" (click)="deposit(amount.value)" class="btn btn-info">Deposit</button>
+ <h4 style="color: teal">Updated Balance is:</h4>{{amont}}
+ </table>

@@ -1,0 +1,24 @@
+<div class="container">
+<h2 class="text-center">Login Form</h2>
+<!-- <div class="imgcontainer">
+    <img src="https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fblogs-images.forbes.com%2Fkurtbadenhausen%2Ffiles%2F2018%2F01%2Fbank.jpg" alt="Avatar" class="avatar">
+  </div> -->
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)" >
+    <div class="form-group" style="margin: 10px;">
+      <label for="mobile"><b>Mobile Number</b></label>
+      <input type="text" placeholder="Enter Mobile Number" formControlName="userMobileNo" name="mobile" #mobile required>
+    </div>
+
+    <div class="form-group" style="margin: 10px;">
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" formControlName="userPassword" name="psw" #password required>
+    </div>
+    {{mobile.value}}
+    <div class="d-flex justify-content-between" style="margin: 10px;">
+        <button type="submit" class="btn btn-success" [disabled]="!loginForm.valid">Login</button>
+        <button type="submit" class="btn btn-primary" routerLink="/createaccount">Register Here</button>  
+    </div>
+    
+</form>
+  
+</div>
